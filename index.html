@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To-Do List</title>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="container">
+            <div class="title">
+                <h1>Your</h1>
+                <h1>To-Do List</h1>
+                <div id="date"></div>
+                <script>
+                    setInterval(function () {
+                        document.getElementById('date').innerHTML = Date();
+                    }, 500);
+                </script>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section>
+        <div class="main-content">
+            <div class="container">
+                <div class="list-box">
+                    <div class="container">
+                        <div class="list-box-title">
+                            <h2>Create Notes</h2>
+                        </div>
+                        <div class="box-input">
+                            <input type="text" placeholder="Create come notes..." id="todoEl">
+                            <span class="addBtn" onclick="newElement()"><img src="./image/plus.png" alt="plus"></span>
+                        </div>
+                        <ul id="list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="./js/main.js"></script>
+</body>
+</html>
